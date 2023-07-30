@@ -1,4 +1,6 @@
-<a name="readme-top"></a>
+<a name="readme-top">
+   <img src="public/logo.png" alt="AM TECH LOGO">
+</a>
 
 <!--
 !!! IMPORTANT !!!
