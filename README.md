@@ -61,7 +61,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ##   Author : 👤 **Anthony Mwenyo**
 
-- GitHub: [@githubhandle](https://github.com/mentor)
+- GitHub: [@githubhandle](https://github.com/mwenyoa)
 - Twitter: [@twitterhandle](https://twitter.com/anthony_mwenyo)
 - LinkedIn [LinkedIn](https://www.linkedin.com/in/anthony-mwenyo/)
 ## 🤝 Contributing
