@@ -1,5 +1,5 @@
  <a name="readme-top">
-   <img src="public/logo.png" alt="AM TECH LOGO">
+   <img src="./../assets/logo.png" alt="AM TECH LOGO">
 </a>
 
 # Country Quest
