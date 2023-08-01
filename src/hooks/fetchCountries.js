@@ -1,10 +1,10 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchCountries } from "../redux/services/api-service";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCountries } from '../redux/services/api-service';
 
 const useFetchCountries = () => {
   const dispatch = useDispatch();
-  const { countries } = useSelector((state) => state.countries);
+  const { countries, isLoaded } = useSelector((state) => state.countries);
 
   useEffect(() => {
     if (countries.length === 0) {
@@ -12,7 +12,7 @@ const useFetchCountries = () => {
     }
   }, [countries.length, dispatch]);
 
-  return countries;
+  return { countries, isLoaded };
 };
 
 export default useFetchCountries;
