@@ -1,6 +1,3 @@
- <a name="readme-top">
-   <img src="./../assets/logo.png" alt="AM TECH LOGO">
-</a>
 
 # Country Quest
 
@@ -22,11 +19,8 @@
 
 ## Live Demo
 
-[Live Demo Link](https://extraordinary-faun-d23aa0.netlify.app)
+[Live Demo Link](https://country-quest.netlify.app/)
 
-## Project Description
-
-Click here to watch a [video](https://www.loom.com/share/5a604551755441e89978a586b95d435b) that gives a brief description of the project
 
 ## Getting Started with Create React Appy
 
