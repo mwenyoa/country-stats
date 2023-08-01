@@ -10,7 +10,7 @@ function App() {
   const ListCountries = lazy(() => import('./pages/countries'));
   const ShowCountry = lazy(() => import('./pages/country'));
   return (
-    <div className="App">
+    <div className="h-full w-screen">
       {/* App Routes */}
       <Router>
         <Header />
