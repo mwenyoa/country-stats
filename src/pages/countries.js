@@ -1,25 +1,98 @@
-import React from "react";
-import useFetchCountries from "../hooks/fetchCountries";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaChevronRight } from 'react-icons/fa';
+import useFetchCountries from '../hooks/fetchCountries';
+import { Loading } from '../components';
 
 const Countries = () => {
-    const countries = useFetchCountries();
-    console.log("Countries", countries);
-    return(
-        <section className="grid md:gap-10 my-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 bg-slate-100 max-w-[90%] mx-auto">
-             {countries?.map((country) => (
-                <div className="country-card sm:mb-10 shadow-xl hover:shadow-2xl rounded">
-                    <img src={country.flags.svg} alt={country.name.official}/>
-                     <div className="coutry-details p-5 ">
-                        <h4>Country: {country.name.official}</h4>
-                         <h4>Capital: {country.capital}</h4>
-                         <h4>Population : {country.population}</h4>
-                         <h5 className="flex flex-end "><Link to={`countries/${country.cca2}`} className="shadow-2xl rounded-full bg-blue-200 px-4 py-2">View More</Link></h5>
-                     </div>
+  const { countries, isLoaded } = useFetchCountries();
+  const mapped = countries?.map((country) => country.name.official);
+  const filtered = mapped?.filter(
+    (country, index) => mapped.indexOf(country) === index,
+  );
+  const sorted = filtered?.sort((a, b) => a.localeCompare(b));
+
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const search = query.get('search') || '';
+  const sortedData = sorted?.filter((co) => co.toLowerCase().includes(search.toLowerCase()));
+  const navigate = useNavigate();
+  const [searchValue, setSearchValue] = useState(search);
+
+  const filterCountryOnChange = (e) => {
+    const { value } = e.target;
+    navigate(value ? `?search=${value}` : '');
+    setSearchValue(value);
+  };
+
+  return (
+    <>
+      <div className="w-full mt-40 md:mb-5">
+        <form className="form">
+          <input
+            type="text"
+            value={searchValue}
+            placeholder="Search for a country"
+            onChange={filterCountryOnChange}
+            className="rounded-full border bg-white border-gray-300 text-slate-700 text-lg focus:ring-sky-600 focus:border-sky-600 block w-full pl-10 p-2.5 shadow-xl"
+            required
+          />
+        </form>
+
+      </div>
+      <section className="home-section h-full grid xs:row-gap-10 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-[90%] mx-auto">
+
+        { sortedData && isLoaded ? sortedData?.map((country) => {
+          const countryObj = countries.find((c) => c.name.official === country);
+          if (!countryObj) return null;
+
+          return (
+            <div
+              className="country-card p-4 xs:w-full sm:w-full  h-full w-full rounded-md"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              key={countryObj.cca2}
+            >
+              <img
+                src={
+                  countryObj.flags.svg
+                    ? countryObj.flags.svg
+                    : countryObj.flags.png
+                }
+                alt={countryObj.name.official}
+                className="h-48  min-w-full"
+              />
+              <div className="coutry-details p-5 leading-10 font-bold">
+                <h4>
+                  <span className="pr-2"> Country:</span>
+                  <span>{countryObj.name.official}</span>
+                </h4>
+                <h4>
+                  <span className="pr-2">Capital:</span>
+                  <span>{countryObj.capital}</span>
+                </h4>
+                <h4>
+                  <span className="pr-2">Population :</span>
+                  <span>{countryObj.population}</span>
+                </h4>
+                <div className="details-btn">
+                  <Link
+                    to={`countries/${countryObj.cca2}`}
+                    className="shadow-2xl rounded-full px-4 my-10"
+                  >
+                    <span>More</span>
+                    <span>
+                      <FaChevronRight className="right-arrow" />
+                    </span>
+                  </Link>
                 </div>
-             ))}
-        </section>
-    )
-}
+              </div>
+            </div>
+          );
+        }) : <Loading />}
+      </section>
+    </>
+  );
+};
 
 export default Countries;
