@@ -34,7 +34,7 @@ const Country = () => {
           className="details-img mx-auto xs:max-w-[95%] sm:max-w-[90%] sm:mx-auto md:max-w-[50%] lg:max-w-[50%] xl:max-w-[50%]  px-5"
         />
         <div className="country-details flex w-full xs:max-w-[95%] sm:max-w-[90%] sm:mx-auto md:max-w-[100%] lg:max-w-[100%] xl:max-w-[100%]  mx-auto  flex-col justify-between px-5 leading-9">
-          <h1 className="flex flex-wrap text-center xs:text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl">
+          <h1 className="flex flex-wrap text-center xs:text-2xl  sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl country-title">
             {name?.official}
           </h1>
           <h2 className="flex justify-between">

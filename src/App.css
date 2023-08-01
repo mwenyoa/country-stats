@@ -165,4 +165,9 @@ footer {
     align-items: center;
     height: auto !important;
   }
+
+  .country-title {
+    font-weight: bold;
+    font-size: x-large;
+  }
 }
