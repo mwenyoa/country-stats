@@ -1,34 +1,30 @@
-import axios from "axios";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const baseURL = "https://restcountries.com/v3.1/all";
+const baseURL = 'https://restcountries.com/v3.1';
 
 export const fetchCountries = createAsyncThunk(
-  "countries/fetchCountries",
+  'countries/fetchCountries',
   async () => {
     try {
-      const res = await axios.get(baseURL);
+      const res = await axios.get(`${baseURL}/all`);
       const data = await res.data;
-      console.log("Data", data);
       return data;
     } catch (err) {
-        console.log(err)
       throw new Error(err.response.data.message);
     }
-  }
+  },
 );
 
 export const fetchCountry = createAsyncThunk(
-  "countries/fetchCountry",
+  'countries/fetchCountry',
   async (countryId) => {
     try {
-      const res = await axios.get(`${baseURL}/cca2/${countryId}`);
+      const res = await axios.get(`${baseURL}/alpha/${countryId}`);
       const data = await res.data;
-      console.log("country Data: ",data);
-      return data; 
+      return data;
     } catch (err) {
-      console.log("country fetch error: ", err)
       throw new Error(err.response.data.message);
     }
-  }
+  },
 );
