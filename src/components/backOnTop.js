@@ -26,7 +26,7 @@ const BackToTopButton = () => {
   return (
     <button
       type="button"
-      className={`fixed bottom-10 right-8 dark:bg-gradient-to-r from-sky-400 to-sky-600 text-white py-3 px-4 rounded-xl ${
+      className={`fixed bottom-10  z-10 right-8 dark:bg-gradient-to-r from-sky-400 to-sky-600 text-white py-3 px-4 rounded-xl ${
         showButton ? 'block' : 'hidden'
       }`}
       onClick={scrollToTop}

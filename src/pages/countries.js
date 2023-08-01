@@ -78,11 +78,10 @@ const Countries = () => {
                 <div className="details-btn">
                   <Link
                     to={`countries/${countryObj.cca2}`}
-                    className="shadow-2xl rounded-full px-4 my-10"
+                    className="shadow my-4 right-arrow"
                   >
-                    <span>More</span>
                     <span>
-                      <FaChevronRight className="right-arrow" />
+                      <FaChevronRight className="rounded-full text-4xl text-sky-900" />
                     </span>
                   </Link>
                 </div>
