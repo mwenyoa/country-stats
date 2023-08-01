@@ -25,7 +25,7 @@ const Country = () => {
   return (
     <section
       data-aos="zoom-in"
-      className="relative country-card flex flex-col items-center mx-auto h-full md:max-w-[80%] lg:max-w-[75%] xl:max-w[75%] rounded-xl country-details"
+      className="relative h-full xs:mt-48 sm:mt-40 md:mt-40 country-card flex flex-col items-center mx-auto md:max-w-[80%] lg:max-w-[75%] xl:max-w-[75%] rounded-xl country-details"
     >
       <div className="relative md:flex py-20 h-full md:justify-between  md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] mx-auto  px-2">
         <img
