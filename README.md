@@ -6,7 +6,7 @@
 
 > **This is a web app  that fetches statistical data from countries around the world. It has the functionality of searching for a specific country using  the search bar, viewing details about a country as well as a well-crafted animated display of beautiful content and loading effects**
 ### API ENDPOINTS:
-#### [ALL COUNTIRIES](https://restcountries.com/all)
+#### [ALL COUNTIRIES](https://restcountries.com/v3.1/all)
 
 ![counrty-quest](https://github.com/mwenyoa/country-stats/assets/28694196/5edeaf26-9926-47d6-b97e-6ac435dfeba2)
 
