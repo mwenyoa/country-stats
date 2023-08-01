@@ -27,7 +27,7 @@ const Countries = () => {
 
   return (
     <>
-      <div className="w-full mt-40 md:mb-5">
+      <div className="w-full mt-20">
         <form className="form">
           <input
             type="text"
@@ -40,7 +40,7 @@ const Countries = () => {
         </form>
 
       </div>
-      <section className="home-section h-full grid xs:row-gap-10 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-[90%] mx-auto">
+      <section className="home-section   h-full grid  gap-x-5 gap-y-10  xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-[90%] mx-auto">
 
         { sortedData && isLoaded ? sortedData?.map((country) => {
           const countryObj = countries.find((c) => c.name.official === country);
@@ -48,7 +48,7 @@ const Countries = () => {
 
           return (
             <div
-              className="country-card p-4 xs:w-full sm:w-full  h-full w-full rounded-md"
+              className="relative country-card xs:max-w-[98%] sm:max-w-[95%] mx-auto  h-full w-full rounded-xl"
               data-aos="zoom-in"
               data-aos-delay="300"
               key={countryObj.cca2}
@@ -60,7 +60,7 @@ const Countries = () => {
                     : countryObj.flags.png
                 }
                 alt={countryObj.name.official}
-                className="h-48  min-w-full"
+                className="h-64  max-w-[95%] my-4 min-w-[90%] mx-auto"
               />
               <div className="coutry-details p-5 leading-10 font-bold">
                 <h4>
