@@ -6,7 +6,8 @@
 }
 
 html,
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -14,6 +15,11 @@ body {
   width: 100vw;
   overflow-x: hidden;
   font-size: 100%;
+  position: relative;
+}
+
+#root {
+  padding-top: 5% !important;
 }
 
 header {
@@ -42,17 +48,20 @@ section {
 
 .country-card {
   box-shadow:
-    rgba(0, 0, 0, 0.2) 0 12px 22px 0,
-    rgba(0, 0, 0, 0.1) 0 2px 4px 0,
-    rgba(255, 255, 255, 0.05) 0 0 0 1px inset !important;
-  max-height: auto !important;
+    rgba(17, 17, 26, 0.1) 0 4px 16px,
+    rgba(17, 17, 26, 0.1) 0 8px 24px,
+    rgba(17, 17, 26, 0.1) 0 16px 56px;
 }
 
 .country-card:hover {
   box-shadow:
-    rgba(0, 0, 0, 0.3) 0 12px 22px 0,
-    rgba(0, 0, 0, 0.2) 0 2px 4px 0,
-    rgba(255, 255, 255, 0.08) 0 0 0 1px inset !important;
+    rgba(17, 17, 26, 0.13) 0 8px 18px,
+    rgba(17, 17, 26, 0.13) 0 8px 24px,
+    rgba(17, 17, 26, 0.13) 0 18px 56px;
+}
+
+.details-page {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 12px 28px 0, rgba(0, 0, 0, 0.1) 0 2px 4px 0, rgba(255, 255, 255, 0.05) 0 0 0 1px inset;
 }
 
 .card-details {
@@ -79,19 +88,22 @@ section {
     rgba(0, 0, 0, 0.1) 0 2px 4px 0,
     rgba(255, 255, 255, 0.05) 0 0 0 1px inset !important;
   border-radius: 50%;
-  height: 60px;
+  height: auto;
   width: auto;
   justify-content: center;
   text-align: center;
 }
 
 .right-arrow {
-  font-size: 22px;
   width: 30px;
   height: 30px;
-  padding: 4px;
+  padding: 2%;
   text-align: right !important;
   font-weight: 100;
+}
+
+.right-arrow:hover {
+  transform: scale(1.1);
 }
 
 form {
@@ -107,6 +119,12 @@ form {
 
 .page-not-found {
   padding: 10% auto !important;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  position: relative;
 }
 
 @media screen and (width <= 768px) {
@@ -136,5 +154,15 @@ form {
     margin: 5% auto;
     height: auto !important;
     width: 90%;
+  }
+
+  #root {
+    position: relative;
+    margin-top: 14% !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto !important;
   }
 }

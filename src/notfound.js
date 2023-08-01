@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const NotFound = () => (
-  <div className="flex items-center justify-center min-h-screen bg-slate-500 page-not-found">
+  <div className="flex items-center w-full justify-center min-h-screen bg-slate-500 page-not-found">
     <div className="container">
       <div className="row">
         <div className="col-sm-8 offset-sm-2 text-gray-50 text-center -mt-52">
