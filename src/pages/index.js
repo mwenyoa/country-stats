@@ -1,4 +1,4 @@
-import Countries from "./countries";
-import Country from "./country";
+import Countries from './countries';
+import Country from './country';
 
-export {Countries, Country};
+export { Countries, Country };
