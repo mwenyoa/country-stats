@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchCountries } from "../services/api-service";
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchCountries } from '../services/api-service';
 
 const initialState = {
   countries: [],
@@ -8,7 +9,7 @@ const initialState = {
 };
 
 const countriesSlice = createSlice({
-  name: "Countries",
+  name: 'Countries',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -28,3 +29,4 @@ const countriesSlice = createSlice({
 });
 
 export default countriesSlice.reducer;
+/* eslint-disable no-param-reassign */
