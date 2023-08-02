@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
-import logo from '../assets/logo.png';
 
 const Footer = () => (
   <footer className=" tex-gray-300 shadow bg-gradient-to-r from-sky-600 to-sky-800 w-full">
@@ -10,8 +9,7 @@ const Footer = () => (
           to="https://anthonymwenyo.netlify.app/"
           className="flex items-center mb-4 sm:mb-0"
         >
-          <img src={logo} className="h-8 mr-3 text-white" alt="AM TECH" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+          <span className="self-center xs:text-lg sm:text-xl md:text-2xl font-semibold whitespace-nowrap text-white">
             AM Technologies
           </span>
         </Link>
@@ -42,8 +40,8 @@ const Footer = () => (
           </li>
         </ul>
       </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto border-gray-700 lg:my-8" />
-      <span className="block text-sm text-gray-400 sm:text-center text-gray-200">
+      <hr className="my-6 border-gray-300 sm:mx-auto lg:my-8" />
+      <span className=" text-md flex justify-center sm:text-center text-gray-200">
         © 2023
         <Link
           to="https://anthonymwenyo.netlify.app/"
