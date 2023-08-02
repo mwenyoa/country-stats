@@ -15,7 +15,7 @@ const Footer = () => (
             AM Technologies
           </span>
         </Link>
-        <ul className="flex justify-between flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-100">
+        <ul className="flex justify-between flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-100">
           <li>
             <Link
               to="https://github.com/mwenyoa/"
@@ -26,7 +26,7 @@ const Footer = () => (
           </li>
           <li>
             <Link
-              to="https://https://www.linkedin.com/in/anthony-mwenyo/"
+              to="https://www.linkedin.com/in/anthony-mwenyo/"
               className="hover:underline hover:scale-125 mx-5"
             >
               <BsLinkedin className="h-6 w-6" />
