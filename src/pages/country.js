@@ -33,62 +33,58 @@ const Country = () => {
           alt={flags?.alt}
           className="details-img mx-auto xs:max-w-[95%] sm:max-w-[90%] sm:mx-auto md:max-w-[50%] lg:max-w-[50%] xl:max-w-[50%]  px-5"
         />
-        <div className="country-details flex w-full xs:max-w-[95%] sm:max-w-[90%] sm:mx-auto md:max-w-[100%] lg:max-w-[100%] xl:max-w-[100%]  mx-auto  flex-col justify-between px-5 leading-9">
-          <h1 className="flex flex-wrap text-center xs:text-2xl  sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl country-title">
+        <div className="country-details xs:text-xs  sm:text-sm md:text-lg  lg:text-lg xl:text-lg flex w-full xs:max-w-[95%] sm:max-w-[90%] sm:mx-auto md:max-w-[100%] lg:max-w-[100%] xl:max-w-[100%]  mx-auto  flex-col justify-between px-5 leading-10">
+          <h1 className="flex flex-wrap text-center w-full xs:text-2xl  sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl country-title">
             {name?.official}
           </h1>
           <h2 className="flex justify-between">
             <span>Capital: </span>
-            <span>{capital}</span>
+            <span className="text-sky-600">{capital}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>population: </span>
-            {' '}
-            {population}
+            <span className="text-sky-600">{population}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Region: </span>
-            {' '}
-            {region}
+            <span className="text-sky-600">{region}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Sub Region: </span>
-            {' '}
-            {subregion}
+            <span className="text-sky-600">{subregion}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Area: </span>
-            {' '}
-            {area}
+            <span className="text-sky-600">{area}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>UN Member </span>
-            {' '}
-            {unMember ? 'Yes' : 'No'}
+            <span className="text-sky-600">{unMember ? 'Yes' : 'No'}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Land Locked: </span>
-            {' '}
-            {landlocked ? 'Yes' : 'No'}
+            <span className="text-sky-600">{landlocked ? 'Yes' : 'No'}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Co-ordinates: </span>
-            {' '}
-            {latlng?.join(' , ')}
+            <span className="text-sky-600">
+              {' '}
+              {latlng?.join(' , ')}
+            </span>
           </h2>
           <h2 className="flex justify-between">
             <span>Time Zone: </span>
-            {' '}
-            {timezones?.[0]}
+            <span className="text-sky-600">{timezones?.[0]}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>Borders: </span>
-            {' '}
-            <span className="flex flex-flow px-2">{borders?.join(' , ')}</span>
+            <span className="flex flex-flow px-2 text-sky-600">
+              {borders?.join(' , ')}
+            </span>
           </h2>
           <h2 className="flex justify-between">
             <span>Week Starts On: </span>
-            <span>{startOfWeek}</span>
+            <span className="text-sky-600">{startOfWeek}</span>
           </h2>
         </div>
       </div>

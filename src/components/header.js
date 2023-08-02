@@ -27,7 +27,7 @@ const Header = () => {
           )}
         </NavLink>
         <NavLink to="/">
-          <h2 className="font-bold"> Country Quest</h2>
+          <h2 className=" xs:text-2xl md:text-4xl font-extrabold"> Country Quest</h2>
         </NavLink>
         <div className="flex space-between">
           <BsMic />
