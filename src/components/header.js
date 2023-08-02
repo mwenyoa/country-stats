@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="z-50  bg-gradient-to-r from-gray-50 to-gray-100 shadow-2xl  font-extrabold">
-      <nav className="xs:px-8 sm:px-10 md:px-20 w-full h-24 font-bold text-sky-900">
+      <nav className="xs:px-4 sm:px-10 md:px-20 w-full h-24 font-bold text-sky-900">
         <NavLink
           to={location.pathname !== '/' ? '/' : '#'}
         >

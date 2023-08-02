@@ -45,7 +45,6 @@ const Countries = () => {
         { sortedData && isLoaded ? sortedData?.map((country) => {
           const countryObj = countries.find((c) => c.name.official === country);
           if (!countryObj) return null;
-
           return (
             <div
               className="relative country-card xs:max-w-[98%] xs:text-xs sm:text-sm  md:text-sm lg:text-lg xl:text-lg sm:max-w-[95%] mx-auto  h-full w-full rounded-xl"
@@ -63,15 +62,15 @@ const Countries = () => {
                 className="xs:h-24 sm:h-48 md:h-64  max-w-[95%] my-4 min-w-[90%] w-full mx-auto"
               />
               <div className="coutry-details h-full xs:py-5 xs:px-3 md:p-10 xs:leading-7 flex flex-col sm:leading-8 md:leading-9 leading-10 font-bold">
-                <h4>
+                <h4 className="flex flex-wrap">
                   <span className="pr-2"> Country:</span>
-                  <span className=" text-sky-600">{countryObj.name.official}</span>
+                  <span className=" text-sky-600">{countryObj.name.common}</span>
                 </h4>
-                <h4>
-                  <span className="pr-2">Capital:</span>
-                  <span className="text-sky-600">{countryObj.capital}</span>
+                <h4 className="flex flex-wrap">
+                  <span className="pr-2">Region:</span>
+                  <span className="text-sky-600">{countryObj.region}</span>
                 </h4>
-                <h4 className="xs:py-5">
+                <h4 className="xs:py-5 flex flex-wrap">
                   <span className="pr-2">Population :</span>
                   <span className="text-sky-600 mb-5">{countryObj.population}</span>
                 </h4>
@@ -79,6 +78,7 @@ const Countries = () => {
                   <Link
                     to={`countries/${countryObj.cca2}`}
                     className="shadow right-arrow"
+                    title="View More Data"
                   >
                     <span>
                       <FaChevronRight className="rounded-full text-3xl text-sky-600" />

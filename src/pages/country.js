@@ -22,6 +22,9 @@ const Country = () => {
     startOfWeek,
   } = country;
 
+  console.log('====================================');
+  console.log('countryObj.capital', capital);
+  console.log('====================================');
   return (
     <section
       data-aos="zoom-in"
@@ -39,7 +42,7 @@ const Country = () => {
           </h1>
           <h2 className="flex justify-between">
             <span>Capital: </span>
-            <span className="text-sky-600">{capital}</span>
+            <span className="text-sky-600">{capital?.join(', ')}</span>
           </h2>
           <h2 className="flex justify-between">
             <span>population: </span>
