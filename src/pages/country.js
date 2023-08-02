@@ -22,9 +22,6 @@ const Country = () => {
     startOfWeek,
   } = country;
 
-  console.log('====================================');
-  console.log('countryObj.capital', capital);
-  console.log('====================================');
   return (
     <section
       data-aos="zoom-in"
