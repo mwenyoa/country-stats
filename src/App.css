@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap");
 
 * {
   box-sizing: border-box;
@@ -100,6 +100,10 @@ section {
   padding: 2%;
   text-align: right !important;
   font-weight: 100;
+  right: 10px;
+  bottom: 10px;
+  margin-top: 10px;
+  position: fixed;
 }
 
 .right-arrow:hover {
@@ -115,6 +119,7 @@ form {
 .country-details {
   position: relative;
   min-height: 60% !important;
+  line-height: 35px !important;
 }
 
 .page-not-found {
@@ -127,6 +132,8 @@ footer {
   position: relative;
 }
 
+
+/* small divices */
 @media screen and (width <= 768px) {
   section {
     margin: 15% !important;
@@ -154,6 +161,8 @@ footer {
     margin: 5% auto;
     height: auto !important;
     width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
   }
 
   #root {
@@ -171,3 +180,4 @@ footer {
     font-size: x-large;
   }
 }
+
