@@ -22,7 +22,7 @@
 [Live Demo Link](https://country-quest.netlify.app/)
 
 
-## Getting Started with Create React Appy
+## Getting Started with Create React App
 
 **Installation**
 - Clone the repository
