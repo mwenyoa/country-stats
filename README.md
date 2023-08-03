@@ -5,6 +5,7 @@
 ### API ENDPOINTS:
 #### [ALL COUNTIRIES](https://restcountries.com/v3.1/all)
 
+![searchcountry](https://github.com/mwenyoa/country-stats/assets/28694196/700dca31-252b-4e24-869a-5b0caa8cd2bb)
 
 
 
